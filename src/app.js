@@ -4,7 +4,6 @@ const morgan = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
-const { v4: uuid } = require('uuid');
 const validateBearerToken = require('./validate-bearer-token')
 const errorHandler = require('./error-handler')
 const bookmarksRouter = require('./bookmarks/bookmarks-router')
@@ -17,7 +16,7 @@ app.use(morgan((NODE_ENV === 'production')
   { skip: () => NODE_ENV === 'test' }
   ))
 
-app.use(morgan(morganOption))
+app.use(morgan(morgan))
 app.use(helmet())
 app.use(cors())
 app.use(validateBearerToken)
