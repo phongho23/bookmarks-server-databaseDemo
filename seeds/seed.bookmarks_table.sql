@@ -1,4 +1,4 @@
-INSERT INTO bookmarks_table(title, url, rating, description)
+INSERT INTO bookmarks(title, url, rating, description)
 VALUES
   ('Google', 'https://www.google.com', '5', 'Most widely used search engine'),
   ('Yahoo', 'https://www.yahoo.com', '4', 'Popular search engine in Japan'),
